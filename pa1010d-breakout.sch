@@ -1,0 +1,221 @@
+EESchema Schematic File Version 4
+LIBS:pa1010d-breakout-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CDTop PA1010D GPS module breakout board"
+Date "2019-11-19"
+Rev "V1.0"
+Comp ""
+Comment1 "Designed by: Sayanee Basu"
+Comment2 "Website: github.com/sayanee/pa1010d-breakout"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CDTop_PA1010D:PA1010D U1
+U 1 1 5DD3ABC6
+P 6900 3600
+F 0 "U1" H 6600 4100 50  0000 C CNN
+F 1 "PA1010D" H 7250 3050 50  0000 C CNN
+F 2 "CDTop_PA1010D:CDTop_MT3333_PA1010D" H 6950 3500 50  0001 C CNN
+F 3 "" H 6950 3500 50  0001 C CNN
+	1    6900 3600
+	1    0    0    -1  
+$EndComp
+Text Label 4500 3450 0    50   ~ 0
+WAKEUP
+Text Label 4500 3550 0    50   ~ 0
+1PPS
+Text Label 4500 3650 0    50   ~ 0
+TX
+Text Label 4500 3750 0    50   ~ 0
+RX
+Text Label 4500 3850 0    50   ~ 0
+NRESET
+Text Label 4500 3950 0    50   ~ 0
+VBACKUP
+Wire Wire Line
+	4350 3450 4500 3450
+Wire Wire Line
+	4350 3550 4500 3550
+Wire Wire Line
+	4350 3650 4500 3650
+Wire Wire Line
+	4350 3750 4500 3750
+$Comp
+L power:GND #PWR0101
+U 1 1 5DD472DC
+P 5050 4350
+F 0 "#PWR0101" H 5050 4100 50  0001 C CNN
+F 1 "GND" H 5055 4177 50  0000 C CNN
+F 2 "" H 5050 4350 50  0001 C CNN
+F 3 "" H 5050 4350 50  0001 C CNN
+	1    5050 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4200 6850 4350
+Wire Wire Line
+	6850 4350 7050 4350
+Wire Wire Line
+	7050 4350 7050 4200
+$Comp
+L power:GND #PWR0102
+U 1 1 5DD482B9
+P 6950 4400
+F 0 "#PWR0102" H 6950 4150 50  0001 C CNN
+F 1 "GND" H 6955 4227 50  0000 C CNN
+F 2 "" H 6950 4400 50  0001 C CNN
+F 3 "" H 6950 4400 50  0001 C CNN
+	1    6950 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 5DD48B19
+P 7050 2900
+F 0 "#PWR0103" H 7050 2750 50  0001 C CNN
+F 1 "+3V3" H 7065 3073 50  0000 C CNN
+F 2 "" H 7050 2900 50  0001 C CNN
+F 3 "" H 7050 2900 50  0001 C CNN
+	1    7050 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 5DD48B70
+P 5050 3250
+F 0 "#PWR0104" H 5050 3100 50  0001 C CNN
+F 1 "+3V3" H 5065 3423 50  0000 C CNN
+F 2 "" H 5050 3250 50  0001 C CNN
+F 3 "" H 5050 3250 50  0001 C CNN
+	1    5050 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3050 7050 3000
+Text Label 6250 3650 2    50   ~ 0
+WAKEUP
+Text Label 6250 3750 2    50   ~ 0
+1PPS
+Wire Wire Line
+	6250 3650 6450 3650
+Wire Wire Line
+	6250 3750 6450 3750
+Text Label 7500 3500 0    50   ~ 0
+TX
+Text Label 7500 3600 0    50   ~ 0
+RX
+Text Label 7500 3800 0    50   ~ 0
+NRESET
+Wire Wire Line
+	7350 3500 7500 3500
+Wire Wire Line
+	7350 3600 7500 3600
+Wire Wire Line
+	7350 3800 7500 3800
+Text Label 6700 2850 2    50   ~ 0
+VBACKUP
+Wire Wire Line
+	6700 2850 6850 2850
+Wire Wire Line
+	6850 2850 6850 2950
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5DD4CF24
+P 7200 3000
+F 0 "#FLG0102" H 7200 3075 50  0001 C CNN
+F 1 "PWR_FLAG" V 7200 3128 50  0000 L CNN
+F 2 "" H 7200 3000 50  0001 C CNN
+F 3 "~" H 7200 3000 50  0001 C CNN
+	1    7200 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7200 3000 7050 3000
+Connection ~ 7050 3000
+Wire Wire Line
+	7050 3000 7050 2900
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5DD4EDC1
+P 6850 2950
+F 0 "#FLG0104" H 6850 3025 50  0001 C CNN
+F 1 "PWR_FLAG" V 6850 3077 50  0000 L CNN
+F 2 "" H 6850 2950 50  0001 C CNN
+F 3 "~" H 6850 2950 50  0001 C CNN
+	1    6850 2950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6850 2950
+Wire Wire Line
+	6850 2950 6850 3050
+Wire Notes Line
+	3800 4650 3800 2650
+Text Notes 3900 2850 0    79   ~ 16
+Connectors
+Wire Notes Line
+	3800 2900 4650 2900
+Wire Notes Line
+	4650 2900 4650 2650
+Text Notes 5550 2950 0    79   ~ 16
+Module to \nbreakout
+Wire Notes Line
+	5500 3000 6250 3000
+Wire Notes Line
+	6250 3000 6250 2650
+Wire Wire Line
+	6950 4200 6950 4400
+$Comp
+L Connector:Conn_01x08_Male J1
+U 1 1 5DD3EF9A
+P 4150 3650
+F 0 "J1" H 4200 4100 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 4450 3150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4150 3650 50  0001 C CNN
+F 3 "~" H 4150 3650 50  0001 C CNN
+	1    4150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3850 4500 3850
+Wire Wire Line
+	4350 3950 4500 3950
+Wire Wire Line
+	4350 3350 5050 3350
+Wire Wire Line
+	5050 3350 5050 3250
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DD47A81
+P 6050 4350
+F 0 "#FLG0101" H 6050 4425 50  0001 C CNN
+F 1 "PWR_FLAG" H 6000 4500 50  0000 L CNN
+F 2 "" H 6050 4350 50  0001 C CNN
+F 3 "~" H 6050 4350 50  0001 C CNN
+	1    6050 4350
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8000 2650 8000 4650
+Wire Notes Line
+	3800 4650 8000 4650
+Wire Notes Line
+	3800 2650 8000 2650
+Wire Notes Line
+	5500 3000 5500 2650
+Wire Wire Line
+	6850 4350 6050 4350
+Connection ~ 6850 4350
+Wire Wire Line
+	5050 4050 5050 4350
+Connection ~ 5050 4350
+Connection ~ 6050 4350
+Wire Wire Line
+	6050 4350 5050 4350
+Wire Wire Line
+	4350 4050 5050 4050
+$EndSCHEMATC
