@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name CDTop_PA1010D)(type KiCad)(uri ${KIPRJMOD}/library/footprints/GPS.pretty)(options "")(descr ""))
+  (lib (name Mouse_bites)(type KiCad)(uri ${KIPRJMOD}/library/footprints/Panelization.pretty)(options "")(descr ""))
 )
