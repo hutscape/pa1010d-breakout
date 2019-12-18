@@ -2,3 +2,5 @@
 *.kicad_pcb-bak
 *.DS_Store
 *.zip
+
+datasheets
