@@ -17,25 +17,14 @@ Text Label 4400 4100 0    50   ~ 0
 WAKEUP
 Text Label 5200 3250 0    50   ~ 0
 1PPS
-Text Label 5200 3050 0    50   ~ 0
-TX
 Text Label 5200 3150 0    50   ~ 0
+TX
+Text Label 5200 3050 0    50   ~ 0
 RX
 Text Label 4400 3900 0    50   ~ 0
 NRESET
 Text Label 4400 4200 0    50   ~ 0
 VBACKUP
-$Comp
-L power:GND #PWR0102
-U 1 1 5DD482B9
-P 7150 4400
-F 0 "#PWR0102" H 7150 4150 50  0001 C CNN
-F 1 "GND" H 7155 4227 50  0000 C CNN
-F 2 "" H 7150 4400 50  0001 C CNN
-F 3 "" H 7150 4400 50  0001 C CNN
-	1    7150 4400
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3V3 #PWR0104
 U 1 1 5DD48B70
@@ -47,15 +36,15 @@ F 3 "" H 5200 4200 50  0001 C CNN
 	1    5200 4200
 	1    0    0    -1  
 $EndComp
-Text Label 6550 3900 2    50   ~ 0
+Text Label 6050 3900 2    50   ~ 0
 WAKEUP
 Text Label 7750 3950 0    50   ~ 0
 1PPS
-Text Label 7750 3600 0    50   ~ 0
-TX
-Text Label 7750 3700 0    50   ~ 0
+Text Label 8100 3600 0    50   ~ 0
 RX
-Text Label 6550 3750 2    50   ~ 0
+Text Label 8100 3700 0    50   ~ 0
+TX
+Text Label 6050 3750 2    50   ~ 0
 NRESET
 Text Label 7400 2850 0    50   ~ 0
 VBACKUP
@@ -91,12 +80,6 @@ F 3 "~" H 7050 4300 50  0001 C CNN
 	1    7050 4300
 	0    -1   -1   0   
 $EndComp
-Wire Notes Line
-	8000 2650 8000 4650
-Wire Notes Line
-	3800 4650 8000 4650
-Wire Notes Line
-	3800 2650 8000 2650
 $Comp
 L power:+3V3 #PWR0103
 U 1 1 5DD48B19
@@ -119,16 +102,6 @@ F 3 "https://drive.google.com/file/d/1O-9RGAwgs2fgtnzJRBa9eB1fAqJt7n_k/view" H 7
 	1    7150 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7150 4400 7150 4300
-Wire Wire Line
-	6700 3900 6550 3900
-Wire Wire Line
-	6700 3750 6550 3750
-Wire Wire Line
-	7600 3600 7750 3600
-Wire Wire Line
-	7600 3700 7750 3700
 Wire Wire Line
 	7600 3950 7750 3950
 Wire Wire Line
@@ -219,25 +192,14 @@ F 3 "~" H 4100 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C1
+L Device:C_Small C2
 U 1 1 5DFC3652
 P 6750 2950
-F 0 "C1" H 6850 3000 50  0000 L CNN
+F 0 "C2" H 6850 3000 50  0000 L CNN
 F 1 "0.1uF" H 6800 2850 50  0000 L CNN
 F 2 "Passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 2950 50  0001 C CNN
 F 3 "~" H 6750 2950 50  0001 C CNN
 	1    6750 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C2
-U 1 1 5DFC3A5D
-P 6550 2950
-F 0 "C2" H 6400 3050 50  0000 L CNN
-F 1 "1uF" H 6400 2850 50  0000 L CNN
-F 2 "Passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6550 2950 50  0001 C CNN
-F 3 "~" H 6550 2950 50  0001 C CNN
-	1    6550 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -278,4 +240,100 @@ Wire Wire Line
 	4300 4300 5200 4300
 Wire Wire Line
 	4300 3900 4400 3900
+$Comp
+L Device:C_Small C1
+U 1 1 5DFC3A5D
+P 6550 2950
+F 0 "C1" H 6400 3050 50  0000 L CNN
+F 1 "1uF" H 6400 2850 50  0000 L CNN
+F 2 "Passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6550 2950 50  0001 C CNN
+F 3 "~" H 6550 2950 50  0001 C CNN
+	1    6550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E031692
+P 7800 3400
+F 0 "R2" H 7900 3450 50  0000 L CNN
+F 1 "10k" H 7900 3350 50  0000 L CNN
+F 2 "Passives:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7800 3400 50  0001 C CNN
+F 3 "~" H 7800 3400 50  0001 C CNN
+	1    7800 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR03
+U 1 1 5E031B5A
+P 7800 3200
+F 0 "#PWR03" H 7800 3050 50  0001 C CNN
+F 1 "+3V3" H 7950 3250 50  0000 C CNN
+F 2 "" H 7800 3200 50  0001 C CNN
+F 3 "" H 7800 3200 50  0001 C CNN
+	1    7800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3200 7800 3300
+$Comp
+L power:GND #PWR0101
+U 1 1 5E03376C
+P 7150 4400
+F 0 "#PWR0101" H 7150 4150 50  0001 C CNN
+F 1 "GND" H 7155 4227 50  0000 C CNN
+F 2 "" H 7150 4400 50  0001 C CNN
+F 3 "" H 7150 4400 50  0001 C CNN
+	1    7150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4300 7150 4400
+Wire Wire Line
+	6050 3900 6700 3900
+Wire Wire Line
+	6050 3750 6250 3750
+Wire Wire Line
+	7600 3700 8100 3700
+$Comp
+L Device:R_Small R1
+U 1 1 5E03A4C9
+P 6250 3550
+F 0 "R1" H 6050 3600 50  0000 L CNN
+F 1 "10k" H 6050 3500 50  0000 L CNN
+F 2 "Passives:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6250 3550 50  0001 C CNN
+F 3 "~" H 6250 3550 50  0001 C CNN
+	1    6250 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR04
+U 1 1 5E03A4CF
+P 6250 3350
+F 0 "#PWR04" H 6250 3200 50  0001 C CNN
+F 1 "+3V3" H 6100 3400 50  0000 C CNN
+F 2 "" H 6250 3350 50  0001 C CNN
+F 3 "" H 6250 3350 50  0001 C CNN
+	1    6250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3350 6250 3450
+Wire Wire Line
+	6250 3650 6250 3750
+Wire Wire Line
+	7600 3600 7800 3600
+Wire Wire Line
+	7800 3500 7800 3600
+Connection ~ 7800 3600
+Wire Wire Line
+	7800 3600 8100 3600
+Connection ~ 6250 3750
+Wire Wire Line
+	6250 3750 6700 3750
+Wire Notes Line
+	8300 2650 8300 4650
+Wire Notes Line
+	3800 4650 8300 4650
+Wire Notes Line
+	3800 2650 8300 2650
 $EndSCHEMATC
